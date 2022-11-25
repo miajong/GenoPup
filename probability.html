@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Gene Probablities</title>
+    <script src="probability.js"></script>
+    <link rel="stylesheet" href="probability.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,800&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="directionsContainer">
+        <p id="directions1">Fill in the missing probability of each trait correctly to move on!</p>
+        <p id="directions2">Challenge: Try drawing each Punnett square before revealing the diagram.</p>
+        <button class="funcButtons" id="hintButton" onclick="hintFunction()">Need a hint?</button>
+    </div>
+    <div class="elements">
+        <div class="parentContainer">
+            <h2>Ear Shape 🐩 🐕</h2>
+            <p class="father">Father: Floppy Ears (Ff)</p>
+            <p class="mother">Mother: Prickled Ears (ff)</p>
+            <p class="key">Dominant Trait: Floppy Ears</p>
+            <p class="key">Recessive Trait: Prickled Ears</p>
+            <button class="go" onclick="earFunction()">Reveal Punnett Square</button>
+        </div>
+
+        <div class="tables">
+            <div id="earTable">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th class="father">F</th>
+                            <th class="father">f</th>
+                        </tr>
+                        <tr>
+                            <th class="mother">f</th>
+                            <td><span class="father">F</span><span class="mother">f</span></td>
+                            <td><span class="father">f</span><span class="mother">f</span></td>
+                        </tr>
+                        <tr>
+                            <th class="mother">f</th>
+                            <td><span class="father">F</span><span class="mother">f</span></td>
+                            <td><span class="father">f</span><span class="mother">f</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="text">
+                    <!-- <p class="probability">Prickled Ears: <b>50%</b></p> -->
+
+                    <label for="probability" class="probability">Floppy Ears:</label>
+                    <select id="numbers" onchange="floppyQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%" id="earFloppy50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="floppyQuizScore"></div>
+
+
+                    <label for="probability" class="probability">Prickled Ears:</label>
+                    <select id="numbers" onchange="prickledQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%" id="earPrickled50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="prickledQuizScore"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="elements">
+        <div class="parentContainer">
+            <h2 class="headerSpace">Fur Color 🎨</h2>
+            <p class="father">Father: Brown Fur (Bb)</p>
+            <p class="mother">Mother: Yellow Fur (bb)</p>
+            <p class="key">Dominant Trait: Brown Fur</p>
+            <p class="key">Recessive Trait: Yellow Fur</p>
+            <button class="go" onclick="furFunction()">Reveal Punnett Square</button>
+        </div>
+        <div class="tables">
+            <div id="furTable">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th class="father">B</th>
+                            <th class="father">b</th>
+                        </tr>
+                        <tr>
+                            <th class="mother">b</th>
+                            <td><span class="father">B</span><span class="mother">b</span></td>
+                            <td><span class="father">b</span><span class="mother">b</span></td>
+                        </tr>
+                        <tr>
+                            <th class="mother">b</th>
+                            <td><span class="father">B</span><span class="mother">b</span></td>
+                            <td><span class="father">b</span><span class="mother">b</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="text">
+                    <label for="probability" class="probability">Brown Fur:</label>
+                    <select id="numbers" onchange="brownFurQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%" id="brownFur50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="brownFurQuizScore"></div>
+
+
+                    <label for="probability" class="probability">Yellow Fur:</label>
+                    <select id="numbers" onchange="yellowFurQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%" id="yellowFur50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="yellowFurQuizScore"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="elements">
+        <div class="parentContainer">
+            <h2 class="headerSpace">Height 📏</h2>
+            <p class="father">Father: Short Legs (HH)</p>
+            <p class="mother">Mother: Short Legs (HH)</p>
+            <p class="key">Dominant Trait: Short Legs</p>
+            <p class="key">Recessive Trait: Long Legs</p>
+            <button class="go" onclick="legFunction()">Reveal Punnett Square</button>
+        </div>
+        
+        <div class="tables">
+            <div id="legTable">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th class="father">H</th>
+                            <th class="father">H</th>
+                        </tr>
+                        <tr>
+                            <th class="mother">H</th>
+                            <td><span class="father">H</span><span class="mother">H</span></td>
+                            <td><span class="father">H</span><span class="mother">H</span></td>
+                        </tr>
+                        <tr>
+                            <th class="mother">H</th>
+                            <td><span class="father">H</span><span class="mother">H</span></td>
+                            <td><span class="father">H</span><span class="mother">H</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="text">
+                    <label for="probability" class="probability">Short Legs:</label>
+                    <select id="numbers" onchange="shortQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%" id="short100%">100%</option>
+                    </select>
+                    <div class="score" id="shortQuizScore"></div>
+                    
+
+                    <label for="probability" class="probability">Long Legs:</label>
+                    <select id="numbers" onchange="tallQuizFunction(this)" name="probability">
+                        <option value="none" id="tall0%">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="tallQuizScore"></div> 
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="elements">
+        <div class="parentContainer">
+            <h2 class="headerSpace">Eye Color 👀</h2>
+            <p class="father">Father: Brown Eyes (Ee)</p>
+            <p class="mother">Mother: Brown Eyes (Ee)</p>
+            <p class="key">Dominant Trait: Brown Eyes</p>
+            <p class="key">Recessive Trait: Blue Eyes</p>
+            <button class="go" onclick="eyeFunction()">Reveal Punnett Square</button>
+        </div>
+        <div class="tables">
+            <div id="eyeTable">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th class="father">E</th>
+                            <th class="father">e</th>
+                        </tr>
+                        <tr>
+                            <th class="mother">E</th>
+                            <td><span class="father">E</span><span class="mother">E</span></td>
+                            <td><span class="father">E</span><span class="mother">e</span></td>
+                        </tr>
+                        <tr>
+                            <th class="mother">e</th>
+                            <td><span class="father">E</span><span class="mother">e</span></td>
+                            <td><span class="father">e</span><span class="mother">e</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="text">
+                    <label for="probability" class="probability">Brown Eyes:</label>
+                    <select id="numbers" onchange="brownEyeQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%">50%</option>
+                        <option value="75%" id="brownEye75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="brownEyeQuizScore"></div> 
+
+                    <label for="probability" class="probability">Blue Eyes:</label>
+                    <select id="numbers" onchange="blueEyeQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%" id="blueEye25%">25%</option>
+                        <option value="50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="blueEyeQuizScore"></div>                     
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="elements">
+        <div class="parentContainer">
+            <h2 class="headerSpace">Hair Length ✂️</h2>
+            <p class="father">Father: Long Hair (tt)</p>
+            <p class="mother">Mother: Short Hair (Tt)</p>
+            <p class="key">Dominant Trait: Short Hair</p>
+            <p class="key">Recessive Trait: Long Hair</p>
+            <button class="go" onclick="hairFunction()">Reveal Punnett Square</button>
+        </div>
+            
+        <div class="tables">
+            <div id="hairTable">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th class="father">t</th>
+                            <th class="father">t</th>
+                        </tr>
+                        <tr>
+                            <th class="mother">T</th>
+                            <td><span class="father">T</span><span class="mother">t</span></td>
+                            <td><span class="father">T</span><span class="mother">t</span></td>
+                        </tr>
+                        <tr>
+                            <th class="mother">t</th>
+                            <td><span class="father">t</span><span class="mother">t</span></td>
+                            <td><span class="father">t</span><span class="mother">t</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="text">
+                    <label for="probability" class="probability">Long Hair:</label>
+                    <select id="numbers" onchange="longHairQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%" id="longHair50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="longHairQuizScore"></div> 
+                    
+
+                    <label for="probability" class="probability">Short Hair:</label>
+                    <select id="numbers" onchange="shortHairQuizFunction(this)" name="probability">
+                        <option value="none">0%</option>
+                        <option value="25%">25%</option>
+                        <option value="50%" id="shortHair50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="score" id="shortHairQuizScore"></div>                     
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="buttonContainer">
+        <a href="mother.html"><button class="funcButtons">Back</button></a>
+        <span id=nextButton>
+            <a href="child.html"><button class="funcButtons" id="createPupButton">Create Pup!</button></a>
+        </span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+:root { 
+    --mother: #ff5b57;
+    --father: #fff314;
+    --personal: var(--primary);
+    --light: #EEE;
+    --gray: #888;
+    --dark: #313154;
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    --Flow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+    --Mlow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+body {
+    font-family: 'montserrat', 'sans-serrif';
+    color: var(--gray);
+    background: var(--light);
+}
+
+.title {
+    color: var(--mother);
+    background-image: linear-gradient(to right, var(--father), var(--mother));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'montserrat', 'sans-serrif';
+
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 1000;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 2px;
+    padding: 10px;
+}
+
+img {
+    width: 520px;
+    height: auto;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 1.5rem;
+    margin-top: -0.5%;
+}
+
+.pupImage {
+    position: absolute;
+    top: justify;
+    left: 12%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    font-size: 32px;
+    padding: 10px;
+    margin: 5px;
+
+    margin-left: 1.4rem;
+    padding-right: 3.4rem;
+    text-align: center;
+    border: 2px ;
+    background-color: white;
+    border-radius: 1.3rem;
+    box-shadow: var(--shadow);
+
+    position: relative;
+    left: 20%;
+
+
+}
+
+ul {
+    margin: 7%;
+}
+
+.list, img {
+    display: inline-block;
+}
+
+
+button {
+    font-family: 'montserrat', 'sans-serrif';
+    font-size: 30px;
+    border: none;
+    padding: 10px 15px;
+    margin: 0px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--gray);
+    background-image: var(--gray);
+    box-shadow: var(--shadow);
+}
+
+#reroll.noprint {
+    width: 120%;
+    margin-left: -9%;
+}
+
+button:hover {
+    background-color: var(--gray);
+    background-image: linear-gradient(to right, #de4946, #b67c09);
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: grey;
+    transform: translateY(2px);
+}
+
+#buttonContainer {
+    margin: 10px;
+    margin-top: 2px;
+    padding: 10px;
+    display:flex;
+    justify-content: space-between;
+    margin-top: 1%;
+
+}
+
+#reroll {
+    background-color: var(--gray);
+    background-image: linear-gradient(to right, #ff5b57, #eba10e);
+}
+
+#reroll:hover {
+    background-color: var(--gray);
+    background-image: linear-gradient(to right, #da2723, #d69721);
+}

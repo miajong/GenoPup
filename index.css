@@ -1,0 +1,101 @@
+
+:root { 
+    --mother: #EA40A4;
+    --father: #3A82EE;
+    --personal: var(--primary);
+    --light: #EEE;
+    --gray: #888;
+    --dark: #313154;
+    --danger: #ff5b57;
+
+    --shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+    --Flow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+    --Mlow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+body {
+    font-family: 'montserrat', 'sans-serrif';
+    color: var(--gray);
+    background: var(--light);
+    margin: 5px;
+    margin-top: 10rem;
+
+
+
+
+
+    
+    background-image: linear-gradient(to right, #3a82ee87, #ea40a30f, rgba(255, 213, 0, 0.168));
+}
+
+img {
+    position: relative;
+    width: 9rem;
+    height: auto;
+    margin-bottom: -4rem;
+
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 0px;
+    color: var(--mother);
+    background-image: linear-gradient(to right, var(--father), var(--mother));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'montserrat', 'sans-serrif';
+
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 1000;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: -3rem;
+    padding: 0px;
+}
+
+
+button {
+    font-family: 'montserrat', 'sans-serrif';
+    font-size: 30px;
+    border: none;
+    padding: 10px 130px;
+    margin: 10px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--gray);
+    background-image: var(--gray);
+    box-shadow: var(--shadow);
+
+}
+
+button:hover, .metters:hover {
+    background-color: var(--gray);
+    background-image: linear-gradient(to right, #cd2185, #1760ce);
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: grey;
+    transform: translateY(2px);
+}
+
+.elementContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    margin: auto;
+    padding: 30px;
+    padding-bottom: 50px;
+    width: 500px;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 3rem;
+    background-color: white;
+    box-shadow: var(--shadow);
+    margin-top: -2%;
+}

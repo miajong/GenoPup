@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Genes Child</title>
+    <link rel="stylesheet" href="child.css" media="screen">
+    <link rel="stylesheet" href="child2.css" media="print">
+
+    <script src="child.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="child">
+        <h2 class="title"><span>Child's Genes</span></h2>
+        <div class="container">
+            <img class="pupImage" id="background" src="Background.jpg" alt="Background">
+            <img class="pupImage" id="furColorImg" src="furYellow.png" alt="Fur Color">
+            <img class="pupImage" id="hairImg" src="hairYellow.png" alt="Hair Length">
+            <img class="pupImage" id="earTypeImg" src="pointedYellow.png" alt="Ear Type">
+            <img class="pupImage" id="eyeColorImg" src="eyeBrown.png" alt="Eye Color">
+
+
+
+
+
+            <div class="list">
+                <ul id="earType">Prickled Ears</ul>
+                <ul id="furType">Yellow Fur</ul>
+                <ul id="legType">Short Legs</ul>
+                <ul id="eyeType">Brown Eyes</ul>
+                <ul id="hairType">Long Hair</ul>
+                <ul><button class="noprint" id="reroll" onclick="rollFunction()">Reroll the traits!</button></ul>
+
+        </div>
+        </div>
+
+        <div class="noprint" id="buttonContainer">
+            <a href="probability.html"><button class="button">Back</button></a>
+            <button class="button" onclick="window.print()">Print Pup</button>
+        </div>
+    </div>
+    
+</body>
+</html>

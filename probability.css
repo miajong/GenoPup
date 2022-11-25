@@ -1,0 +1,227 @@
+:root { 
+    --mother: #EA40A4;
+    --father: #3A82EE;
+    --personal: var(--primary);
+    --light: #EEE;
+    --gray: #888;
+    --dark: #313154;
+    --danger: #ff5b57;
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    --Flow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+    --Mlow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+
+
+body {
+    font-family: 'montserrat', 'sans-serrif';
+    font-size: 30px;
+    margin: 20px;
+    margin-bottom: 5px;
+    padding: 10px;
+    color: var(--gray);
+    background-color: var(--light);
+
+}
+
+button {
+    color: white;
+    background-color: var(--mother);
+    background-image: linear-gradient(to right, var(--mother), var(--father));
+    font-family: 'montserrat', 'sans-serrif';
+    font-size: 30px;
+    border: none;
+    padding: 8px 30px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+button:hover {
+    background-color: var(--gray);
+    background-image: linear-gradient(to right, #cd2185, #1760ce);
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: grey;
+    transform: translateY(2px);
+}
+
+h2 {
+    font-size: 60px;
+    font-style: italic;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: var(--dark);
+}
+
+h2.headerSpace {
+    margin-top: 100px;
+}
+
+.directionsContainer {
+    color: var(--dark);
+    text-align: center;
+    border: 1px ;
+    background-color: white;
+    box-shadow: var(--shadow);
+    width: fit-content;
+    border-radius: 20px;
+    padding: 2px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 5px;
+    margin: auto;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.parentContainer {
+    border: 0px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+table {
+    font-size: 70px;
+    width:400px;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+}
+      
+td {
+    background-color: white;
+    padding: 10px 10px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    border-right: 2px solid;
+}
+
+.table, .text {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.probability {
+    display: grid;
+    margin-bottom: justify;
+}
+
+.text, .tables {
+    vertical-align:bottom;
+}
+
+.tables {
+    margin: 10px;
+    margin-left: 5px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    width: fit-content;
+    border: 2px;
+    padding-bottom: 85px;
+    padding-top: 20px;
+
+}
+
+
+.parentContainer, .tables {
+    display: inline-block;
+}
+
+.buttonContainer {
+    margin: 10px;
+    margin-bottom: 5px;
+    margin-top: 70px;
+    margin-left: 22px;
+    margin-right: 22px;
+    padding: 10px;
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.funcButtons {
+    background-color: var(--gray);
+    background-image: var(--gray);
+
+}
+
+#earTable, #furTable, #legTable, #eyeTable, #hairTable {
+    visibility: hidden;
+}
+
+
+.animate {
+    animation: fadeIn 2s linear forwards;
+}
+
+@keyframes fadeIn {
+ 0% { opacity:0; }
+ 100% { opacity:1; } 
+}
+
+
+
+.father {
+    color:var(--father);
+}
+
+.mother {
+    color: var(--mother);
+}
+
+b {
+    color: var(--dark);
+}
+
+
+
+select {
+    font-family: 'montserrat', 'sans-serrif';
+    font-size: 25px;
+    padding: 10px;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    font-style: italic;
+
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+
+.score {
+    font-size: 25px;
+    color: rgb(0, 152, 20);
+    margin-bottom: 1.2rem;
+}
+
+#createPupButton {
+    visibility: hidden;
+}
+
+#hintButton {
+    margin-bottom: 1.6rem;
+}
+
+#directions1 {
+    font-size: 28.6px;
+}
+
+#directions2 {
+    font-size: 28.4px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}

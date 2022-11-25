@@ -1,0 +1,80 @@
+/* external styles for print */
+
+body {
+    font-family: 'montserrat', 'sans-serrif';
+    color: black;
+    border: 3px dashed;
+    border-radius: 1.2rem;
+}
+
+.title span{
+    display: none;
+
+}
+
+.title:after {
+    content: 'Pup Name: _________';
+
+    color: black;
+    font-family: 'montserrat', 'sans-serrif';
+
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 1000;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 2px;
+    padding: 10px;
+}
+
+img {
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 1.5rem;
+}
+
+.pupImage {
+    position: absolute;
+    top: 10%;
+    left: -4%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    font-size: 35px;
+    padding: 10px;
+    margin: 5px;
+
+    margin-left: 2%;
+    padding-right: 3.4rem;
+    text-align: center;
+    border: 2px;
+    position: relative;
+    left: 20%;
+
+
+}
+
+.list, img {
+    display: inline-block;
+}
+
+
+#buttonContainer {
+    visibility: hidden;
+
+}
+
+#reroll {
+    visibility: hidden;
+}
+
+#background {
+    visibility: hidden;
+}
